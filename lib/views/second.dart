@@ -5,6 +5,7 @@ class SecondPage extends StatefulWidget {
   _MyHomePageState createState() => new _MyHomePageState();
 }
 
+
 class _MyHomePageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
@@ -13,14 +14,10 @@ class _MyHomePageState extends State<SecondPage> {
         title: new Text('widget.title 2'),
       ),
       body: new Center(
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new Text(
-              '222222',
-            ),
-          ],
-        ),
+        child: new RaisedButton(
+          onPressed: () {},
+          child: const Text('get data'),
+        )
       ),
     );
   }
