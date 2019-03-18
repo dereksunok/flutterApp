@@ -14,10 +14,27 @@ class _MyHomePageState extends State<SecondPage> {
         title: new Text('widget.title 2'),
       ),
       body: new Center(
-        child: new RaisedButton(
-          onPressed: () {},
-          child: const Text('get data'),
+        child: new Row(
+          children: <Widget>[
+            new Column(
+              children: <Widget>[
+                new RaisedButton(
+                  onPressed: () {},
+                  child: const Text('get data'),
+                )
+              ]
+            ),
+            new Column(
+              children: <Widget>[
+                new Image.network(
+                  "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4",
+                  width: 200.0,
+                )
+              ]
+            )
+          ]
         )
+        
       ),
     );
   }
