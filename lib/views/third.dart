@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../components/counter.dart';
 
 class ThirdPage extends StatefulWidget {
   @override
@@ -13,16 +14,7 @@ class _MyHomePageState extends State<ThirdPage> {
       appBar: new AppBar(
         title: new Text('widget.title 3'),
       ),
-      body: new Center(
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new Text(
-              '3333',
-            ),
-          ],
-        ),
-      ),
+      body: new CounterSize(),
     );
   }
 }

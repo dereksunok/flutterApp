@@ -4,10 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 
-class DoubanTheatersWidget extends StatefulWidget {
+class ListTheatersWidget extends StatefulWidget {
   final String title;
-
-  DoubanTheatersWidget({Key key, this.title}) : super(key: key);
+  ListTheatersWidget({Key key, this.title}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
@@ -15,7 +14,7 @@ class DoubanTheatersWidget extends StatefulWidget {
   }
 }
 
-class _MyHomeAppState extends State<DoubanTheatersWidget> {
+class _MyHomeAppState extends State<ListTheatersWidget> {
   List subjects = [];
   String title = '';
 

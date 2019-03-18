@@ -10,7 +10,7 @@ class _MyHomePageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      body: new DoubanTheatersWidget(),
+      body: new ListTheatersWidget(),
     );
   }
 }
