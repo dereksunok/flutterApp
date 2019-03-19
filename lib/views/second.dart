@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../components/pointer.dart';
 
 class SecondPage extends StatefulWidget {
   @override
@@ -17,21 +18,38 @@ class _MyHomePageState extends State<SecondPage> {
         child: new Row(
           children: <Widget>[
             new Column(
-              children: <Widget>[
-                new RaisedButton(
-                  onPressed: () {},
-                  child: const Text('get data'),
-                )
+              children:<Widget>[
+                new Row(
+                  children: <Widget>[
+                    new Column(
+                      children:<Widget>[
+                        new GestureDetectorTestRoute()
+                      ]
+                    ),
+                  ]
+                ),
+                new Row(
+                  children: <Widget>[
+                    new Column(
+                      children: <Widget>[
+                        new RaisedButton(
+                          onPressed: () {},
+                          child: const Text('get data'),
+                        )
+                      ]
+                    ),
+                    new Column(
+                      children: <Widget>[
+                        new Image.network(
+                          "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4",
+                          width: 200.0,
+                        )
+                      ]
+                    )
+                  ],
+                ),
               ]
             ),
-            new Column(
-              children: <Widget>[
-                new Image.network(
-                  "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4",
-                  width: 200.0,
-                )
-              ]
-            )
           ]
         )
         
