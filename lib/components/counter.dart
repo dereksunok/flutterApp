@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../utils/event.dart';
 
 class CounterSize extends StatefulWidget {
   CounterSize({Key key}) : super(key: key);
@@ -14,6 +15,8 @@ class _CounterSizeState extends State<CounterSize> {
   void initState() {
     super.initState();
     print("initState: $count");
+
+    bus.emit("login", 'userInfo');
   }
 
   changeCounter() {

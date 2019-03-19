@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import '../utils/event.dart';
 
 
 class ListTheatersWidget extends StatefulWidget {
@@ -17,10 +18,18 @@ class ListTheatersWidget extends StatefulWidget {
 class _MyHomeAppState extends State<ListTheatersWidget> {
   List subjects = [];
   String title = '';
+  var login = '';
 
   @override
   void initState() {
     loadData();
+    //监听登录事件
+    if(login == '') {
+      bus.on("login", (arg) {
+        login = 'on login $arg';
+        print(login);
+      });
+    }
   }
 
   @override
