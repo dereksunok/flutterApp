@@ -10,13 +10,13 @@ class Config {
   static String get apiHost {
     switch (env) {
       case Env.PROD:
-        return "http://www.aaa.com";
+        return "http://www.aaa.com/service-article-app";
       case Env.DEV:
-        return "http://dev.aaa.com";
+        return "http://dev.aaa.com/service-article-app";
       case Env.LOCAL:
-        return "http://local.aaa.com";
+        return "http://localhost:3000/service-article-app";
       default:
-        return "http://local.aaa.com";
+        return "http://localhost:3000/service-article-app";
     }
   }
 }

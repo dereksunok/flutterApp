@@ -2,7 +2,10 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+
 import '../utils/event.dart';
+import '../config/config.dart' ;
+
 
 
 class ListTheatersWidget extends StatefulWidget {
@@ -45,7 +48,7 @@ class _MyHomeAppState extends State<ListTheatersWidget> {
   }
 
   loadData() async {
-    String loadRUL = "https://api.douban.com/v2/movie/in_theaters";
+    String loadRUL = Config.apiHost+'/get';
     http.Response response = await http.get(loadRUL);
     var result = json.decode(response.body);
     setState(() {
