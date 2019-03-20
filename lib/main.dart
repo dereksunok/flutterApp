@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './views/first.dart';
 import './views/second.dart';
 import './views/third.dart';
+import './views/socket.dart';
 
 void main() => runApp(new MyApp());
 
@@ -26,7 +27,8 @@ class _MyHomePageState extends State<MyHomePage> {
   final _widgetOptions = [
     new FirstPage(),
     new SecondPage(),
-    new ThirdPage(),
+    new WebSocketRoute(),
+    // new ThirdPage(),
   ];
 
   @override
@@ -37,9 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
-          BottomNavigationBarItem(icon: Icon(Icons.business), title: Text('Business')),
-          BottomNavigationBarItem(icon: Icon(Icons.school), title: Text('School')),
+          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home'), backgroundColor: Colors.orange),
+          BottomNavigationBarItem(icon: Icon(Icons.business), title: Text('Business'), backgroundColor: Colors.orange),
+          BottomNavigationBarItem(icon: Icon(Icons.score), title: Text('socket'), backgroundColor: Colors.orange),
+          // BottomNavigationBarItem(icon: Icon(Icons.school), title: Text('School'), backgroundColor: Colors.orange),
         ],
         currentIndex: _selectedIndex,
         fixedColor: Colors.orangeAccent,
